@@ -3,9 +3,12 @@ $( document ).ready(function() {
     var newTask = $('#newTask');    
 
     newTask.keypress( function(event) {
+        var valueInput = $(this).val();
         if(event.which === 13) {
-            list.append('<li class="task">' + this.value + '</li>');
-            this.value = "";
+            if (valueInput) {
+                list.append('<li><button class="delete-btn"><i class="fas fa-trash-alt"></i></button><span class="task">' + valueInput + '</span></li>');
+                $(this).val("");
+            }
         }
     });
 
@@ -18,6 +21,10 @@ $( document ).ready(function() {
         .on('click', '.task', function() {
             var task = $(this);
             task.toggleClass('done');
+        })
+
+        .on('click', '.delete-btn', function() {
+            $(this).parents('li').remove();
         });
 
 });
