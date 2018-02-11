@@ -12,6 +12,15 @@ body {
     margin: 5% auto;
 }
 
-#content ul {
+#newTask {
+    display: none;
+}
+
+#list {
     list-style-type: none;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
