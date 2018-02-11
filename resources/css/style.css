@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-image: url(img/wood.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#container {
+    max-width: 350px;
+    background: #fff;
+    margin: 5% auto;
+}
+
+#content ul {
+    list-style-type: none;
+}
