@@ -6,7 +6,7 @@ $( document ).ready(function() {
         var valueInput = $(this).val();
         if(event.which === 13) {
             if (valueInput) {
-                list.append('<li><button class="delete-btn"><i class="fas fa-trash-alt"></i></button><span class="task">' + valueInput + '</span></li>');
+                list.append('<li><span class="delete-btn"><i class="fas fa-trash-alt"></i></span><span class="task"> ' + valueInput + '</span></li>');
                 $(this).val("");
             }
         }
@@ -20,11 +20,15 @@ $( document ).ready(function() {
 
         .on('click', '.task', function() {
             var task = $(this);
-            task.toggleClass('done');
+            task.toggleClass('completed');
         })
 
         .on('click', '.delete-btn', function() {
-            $(this).parents('li').remove();
+            var deleteBtn = $(this);
+            deleteBtn.parents('li').fadeOut(500, function () {
+                var liElement = $(this);
+                liElement.remove();
+            });
         });
 
 });

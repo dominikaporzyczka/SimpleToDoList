@@ -7,21 +7,23 @@
     <title>TO DO LIST</title>
 
     <link rel="stylesheet" href="resources/css/fa-svg-with-js.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/style.css" type="text/css">
 </head>
 
 <body>
     <div id="container">
         <div id="header">
-            <h2 id="title">TO DO LIST</h2>
-            <button id="showInput">+</button>
+            <h1 id="title">TO-DO LIST <span class="plusIcon" id="showInput"><i class="fas fa-plus"></i></span></h1>
         </div>
         
         <input id="newTask" type="text" placeholder="Add New Task" autocomplete="off">
 
         <div id="content">
             <ul id="list">
-
+                <li><span class="delete-btn"><i class="fas fa-trash-alt"></i></span><span class="task"> Task 1 </span></li>
+                <li><span class="delete-btn"><i class="fas fa-trash-alt"></i></span><span class="task"> Task 2 </span></li>
+                <li><span class="delete-btn"><i class="fas fa-trash-alt"></i></span><span class="task"> Task 3 </span></li>
             </ul>
         </div>
     </div>
