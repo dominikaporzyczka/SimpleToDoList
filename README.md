@@ -16,7 +16,7 @@ The project has been created during the Udacity course -> The Web Developer Boot
 
 https://dominikaporzyczka.github.io/SimpleToDoList/
 
-## Technogies
+## Technologies
 
 * HTML
 * CSS3
